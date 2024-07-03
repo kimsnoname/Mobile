@@ -1,0 +1,146 @@
+<resources>
+    <string name="app_name">KUBIT</string>
+    <string name="app_description">가장 신뢰받을 가상화폐 모의투자</string>
+
+    <string name="dialog_msg_001">잠시만 기다려 주세요.</string>
+    <string name="dialog_msg_002">네트워크 연결이 필요합니다.\n네트워크 연결 후에 다시 실행해주세요.</string>
+    <string name="dialog_msg_003">정말 로그아웃 하시겠습니까?</string>
+    <string name="dialog_msg_004">한 번 초기화한 데이터는 다시 복구할 수 없습니다. \n정말 초기화 하시겠습니까?</string>
+    <string name="dialog_msg_005">한 번 취소한 거래는 다시 복구할 수 없습니다. \n정말 취소 하시겠습니까?</string>
+    <string name="toast_msg_error_001">예기치 못한 오류가 발생했습니다. 잠시 후에 다시 시도해 주세요.</string>
+    <string name="toast_msg_login_success">로그인 되었습니다.</string>
+    <string name="toast_msg_logout_success">로그아웃 되었습니다.</string>
+    <string name="toast_msg_login_fail">ID 또는 PW를 확인해 주세요.</string>
+    <string name="api_connection_fail_msg">서버로부터 응답이 없습니다. 잠시 후에 다시 시도해 주세요.</string>
+    <string name="toast_msg_krw_short">매수 금액이 부족합니다.</string>
+    <string name="toast_msg_coin_quantity_short">매도 수량이 부족합니다.</string>
+    <string name="toast_msg_bid_order_success">매수 주문이 완료되었습니다.</string>
+    <string name="toast_msg_ask_order_success">매도 주문이 완료되었습니다.</string>
+    <string name="toast_msg_selected_not_yet_empty">취소하실 거래를 선택해 주세요.</string>
+    <string name="toast_msg_deposit_price_condition">입금 금액은 최소 10,000원 이상이어야 합니다.</string>
+    <string name="toast_msg_withdrawal_condition">출금 금액은 최소 10,000원 이어야 하며, 보유하고 있는 원화보다 많이 출금할 수 없습니다.</string>
+    <string name="toast_msg_deposit_withdrawal_success">입/출금이 완료되었습니다.</string>
+    <string name="toast_msg_successful_reset">초기화 되었습니다.</string>
+
+    <string name="bottom_nav_coinList">거래소</string>
+    <string name="bottom_nav_investment">투자내역</string>
+    <string name="bottom_nav_exchange">입출금</string>
+    <string name="bottom_nav_profile">내정보</string>
+
+    <string name="coinList_title">거래소</string>
+    <string name="coinList_krwMarket">KRW</string>
+    <string name="coinList_favoriteMarket">관심</string>
+    <string name="coinList_searchHint">코인명 검색</string>
+    <string name="coinList_coinName">코인명</string>
+    <string name="coinList_tradePrice">현재가</string>
+    <string name="coinList_signedChangeRate">전일대비</string>
+    <string name="coinList_accTradePrice24H">거래대금</string>
+
+    <string name="investment_title">투자내역</string>
+    <string name="investment_tab_asset">보유자산</string>
+    <string name="investment_tab_record">거래내역</string>
+    <string name="investment_tab_not_yet">미체결</string>
+    <string name="investment_remove_select_order">선택주문 취소</string>
+
+    <string name="investmentAssetItem_title">내 보유자산</string>
+    <string name="investmentAssetItem_krwTitle">보유 KRW</string>
+    <string name="investmentAssetItem_totalAssetTitle">총 보유자산</string>
+    <string name="investmentAssetItem_totalBidPriceTitle">총매수</string>
+    <string name="investmentAssetItem_changeValuationTitle">평가손익</string>
+    <string name="investmentAssetItem_totalValuationTitle">총평가</string>
+    <string name="investmentAssetItem_earningRateTitle">수익률</string>
+
+    <string name="investmentPortfolioItem_title">보유자산 포트폴리오</string>
+    <string name="investmentPortfolioItem_assetPercent">보유 비중\n(%)</string>
+
+    <string name="investmentWalletItem_quantityTitle">보유수량</string>
+    <string name="investmentWalletItem_bidAvgPriceTitle">매수평균가</string>
+    <string name="investmentWalletItem_valuationPriceTitle">평가금액</string>
+    <string name="investmentWalletItem_bidPriceTitle">매수금액</string>
+
+    <string name="investmentRecordItem_timeTitle">체결시간</string>
+    <string name="investmentRecordItem_tradePriceTitle">거래금액</string>
+    <string name="investmentRecordItem_quantityTitle">거래수량</string>
+    <string name="investmentRecordItem_tradeUnitPriceTitle">거래단가</string>
+    <string name="investmentRecordItem_feeTitle">수수료</string>
+    <string name="investmentRecordItem_returnPriceTitle">정산금액</string>
+
+    <string name="investmentNotYetItem_timeTitle">주문시간</string>
+    <string name="investmentNotYetItem_quantityTitle">주문수량</string>
+    <string name="investmentNotYetItem_priceTitle">주문가격</string>
+    <string name="investmentNotYetItem_notYetQuantityTitle">미체결량</string>
+
+    <string name="exchange_title">KRW 입출금</string>
+    <string name="exchange_totalKRWTitle">총 보유금액</string>
+    <string name="exchange_canWithdrawalTitle">출금가능</string>
+    <string name="exchange_deposit">입금하기</string>
+    <string name="exchange_withdrawal">출금하기</string>
+    <string name="exchange_recordTitle">KRW 입출금 내역</string>
+
+    <string name="profile_title">내정보</string>
+    <string name="profile_requestLogin">로그인을 해주세요</string>
+    <string name="profile_login">로그인</string>
+    <string name="profile_logout">로그아웃</string>
+    <string name="profile_userGuide">이용자 가이드</string>
+    <string name="profile_reset">초기화</string>
+
+    <string name="transaction_tab_order">주문</string>
+    <string name="transaction_tab_chart">차트</string>
+
+    <string name="orderBook_tab_bid">매수</string>
+    <string name="orderBook_tab_ask">매도</string>
+    <string name="orderBook_designatedPrice">지정</string>
+    <string name="orderBook_marketPrice">시장</string>
+    <string name="orderBook_canOrderTitle">주문가능</string>
+    <string name="orderBook_quantity">수량</string>
+    <string name="orderBook_quantityPercent">가능</string>
+    <string name="orderBook_unitPrice">가격</string>
+    <string name="orderBook_totalPriceTitle">총액</string>
+    <string name="orderBook_clear">초기화</string>
+    <string name="orderBook_bid">매수</string>
+    <string name="orderBook_ask">매도</string>
+    <string name="orderBook_minOrderPriceTitle">최소주문금액</string>
+    <string name="orderBook_minOrderPrice">5,000 KRW</string>
+    <string name="orderBook_feeTitle">수수료(부가세 포함)</string>
+    <string name="orderBook_fee">0.05%</string>
+
+    <string name="chart_unitMinute_1">1분</string>
+    <string name="chart_unitMinute_3">3분</string>
+    <string name="chart_unitMinute_5">5분</string>
+    <string name="chart_unitMinute_10">10분</string>
+    <string name="chart_unitMinute_15">15분</string>
+    <string name="chart_unitMinute_30">30분</string>
+    <string name="chart_unitMinute_60">60분</string>
+    <string name="chart_unitMinute_240">240분</string>
+    <string name="chart_unitDay">일</string>
+    <string name="chart_unitWeek">주</string>
+    <string name="chart_unitMonth">월</string>
+
+    <string name="chartMainIndicatorSelector_movingAverage">이동평균선</string>
+    <string name="chartMainIndicatorSelector_bollingerBands">볼린져밴드</string>
+    <string name="chartMainIndicatorSelector_dailyBalanceTable">일목균형표</string>
+    <string name="chartMainIndicatorSelector_pivot">피봇</string>
+    <string name="chartMainIndicatorSelector_envelopes">Envelopes</string>
+    <string name="chartMainIndicatorSelector_priceChannels">Price Channels</string>
+
+    <string name="login_idTitle">ID</string>
+    <string name="login_idHint">ID를 입력해 주세요.</string>
+    <string name="login_pwTitle">PW</string>
+    <string name="login_pwHint">PW를 입력해 주세요.</string>
+    <string name="login_confirm">로그인하기</string>
+    <string name="login_checkInputMsg">ID 또는 PW를 입력해 주세요.</string>
+
+    <string name="enterPrice_unitPriceTitle">주문수량 입력</string>
+    <string name="enterPrice_quantityTitle">주문가격 입력</string>
+    <string name="enterPrice_totalPriceTitle">주문총액 입력</string>
+    <string name="enterPrice_unitPrice">주문가격</string>
+    <string name="enterPrice_quantity">주문수량</string>
+    <string name="enterPrice_totalPrice">주문총액</string>
+
+    <string name="enterExchangePrice_depositTitle">입금액 입력</string>
+    <string name="enterExchangePrice_withdrawalTitle">출금액 입력</string>
+    <string name="enterExchangePrice_totalPrice">총액</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

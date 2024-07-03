@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_investmentNotYetItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/tv_investmentNotYetItem_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/noto_sans_kr_medium"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:text="이더리움(ETH)"
+        android:textColor="@color/text"
+        android:textSize="12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/gl_investmentNotYetItem"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_investmentNotYetItem_tradeType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/noto_sans_kr_medium"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:text="매도"
+        android:textColor="@color/coin_blue"
+        android:textSize="12dp"
+        app:layout_constraintLeft_toRightOf="@id/gl_investmentNotYetItem"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_investmentNotYetItem_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:padding="10dp"
+        android:src="@drawable/icon_check_unselected"
+        app:layout_constraintBottom_toBottomOf="@id/tv_investmentNotYetItem_tradeType"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_investmentNotYetItem_tradeType" />
+
+    <TextView
+        android:id="@+id/tv_investmentNotYetItem_timeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:text="@string/investmentNotYetItem_timeTitle"
+        android:textColor="@color/gray"
+        android:textSize="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tv_investmentNotYetItem_time"
+        app:layout_constraintTop_toBottomOf="@id/tv_investmentNotYetItem_name" />
+
+    <TextView
+        android:id="@+id/tv_investmentNotYetItem_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:gravity="center_vertical|right"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:textColor="@color/text"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_investmentNotYetItem_timeTitle"
+        app:layout_constraintLeft_toRightOf="@id/tv_investmentNotYetItem_timeTitle"
+        app:layout_constraintRight_toLeftOf="@id/gl_investmentNotYetItem"
+        app:layout_constraintTop_toTopOf="@id/tv_investmentNotYetItem_timeTitle" />
+
+    <TextView
+        android:id="@+id/tv_investmentNotYetItem_quantityTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:text="@string/investmentNotYetItem_quantityTitle"
+        android:textColor="@color/gray"
+        android:textSize="10dp"
+        app:layout_constraintLeft_toRightOf="@id/gl_investmentNotYetItem"
+        app:layout_constraintRight_toLeftOf="@id/tv_investmentNotYetItem_quantity"
+        app:layout_constraintTop_toBottomOf="@id/tv_investmentNotYetItem_name" />
+
+    <TextView
+        android:id="@+id/tv_investmentNotYetItem_quantity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:gravity="center_vertical|right"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:textColor="@color/text"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_investmentNotYetItem_quantityTitle"
+        app:layout_constraintLeft_toRightOf="@id/tv_investmentNotYetItem_quantityTitle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_investmentNotYetItem_quantityTitle" />
+
+    <TextView
+        android:id="@+id/tv_investmentNotYetItem_priceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:text="@string/investmentNotYetItem_priceTitle"
+        android:textColor="@color/gray"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tv_investmentNotYetItem_price"
+        app:layout_constraintTop_toBottomOf="@id/tv_investmentNotYetItem_timeTitle" />
+
+    <TextView
+        android:id="@+id/tv_investmentNotYetItem_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:gravity="center_vertical|right"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:textColor="@color/text"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_investmentNotYetItem_priceTitle"
+        app:layout_constraintLeft_toRightOf="@id/tv_investmentNotYetItem_priceTitle"
+        app:layout_constraintRight_toLeftOf="@id/gl_investmentNotYetItem"
+        app:layout_constraintTop_toTopOf="@id/tv_investmentNotYetItem_priceTitle" />
+
+    <TextView
+        android:id="@+id/tv_investmentNotYetItem_notYetQuantityTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:text="@string/investmentNotYetItem_notYetQuantityTitle"
+        android:textColor="@color/gray"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/gl_investmentNotYetItem"
+        app:layout_constraintRight_toLeftOf="@id/tv_investmentNotYetItem_notYetQuantity"
+        app:layout_constraintTop_toBottomOf="@id/tv_investmentNotYetItem_quantityTitle" />
+
+    <TextView
+        android:id="@+id/tv_investmentNotYetItem_notYetQuantity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:gravity="center_vertical|right"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:textColor="@color/text"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_investmentNotYetItem_notYetQuantityTitle"
+        app:layout_constraintLeft_toRightOf="@id/tv_investmentNotYetItem_notYetQuantityTitle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_investmentNotYetItem_notYetQuantityTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
