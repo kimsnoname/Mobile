@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".coinlist.view.CoinListFragment">
+
+    <TextView
+        android:id="@+id/tv_coinList_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:fontFamily="@font/noto_sans_kr_medium"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:text="@string/coinList_title"
+        android:textColor="@color/text"
+        android:textSize="22dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_coinList_search"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:paddingLeft="11dp"
+        android:src="@drawable/icon_search"
+        app:layout_constraintBottom_toBottomOf="@id/et_coinList_search"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/et_coinList_search"
+        app:layout_constraintTop_toTopOf="@id/et_coinList_search" />
+
+    <EditText
+        android:id="@+id/et_coinList_search"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/background"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:hint="@string/coinList_searchHint"
+        android:imeOptions="actionSearch"
+        android:includeFontPadding="false"
+        android:inputType="text"
+        android:letterSpacing="-0.05"
+        android:maxLines="1"
+        android:paddingLeft="5dp"
+        android:paddingTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/text"
+        android:textColorHint="@color/gray"
+        android:textSize="14dp"
+        app:layout_constraintLeft_toRightOf="@id/iv_coinList_search"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_coinList_title" />
+
+    <View
+        android:id="@+id/view_coinList_searchBorder"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_coinList_search" />
+
+    <TextView
+        android:id="@+id/tv_coinList_krwMarket"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/back_coin_list_market_selected"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/coinList_krwMarket"
+        android:textColor="@color/secondary"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@id/cl_coinList_legend"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tv_coinList_favoriteMarket"
+        app:layout_constraintTop_toBottomOf="@id/view_coinList_searchBorder" />
+
+    <TextView
+        android:id="@+id/tv_coinList_favoriteMarket"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_coin_list_favorite_market"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/coinList_favoriteMarket"
+        android:textColor="@color/text"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_coinList_krwMarket"
+        app:layout_constraintLeft_toRightOf="@id/tv_coinList_krwMarket"
+        app:layout_constraintTop_toTopOf="@id/tv_coinList_krwMarket" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_coinList_legend"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_border_top_bottom"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/rv_coinList"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_coinList_krwMarket">
+
+        <TextView
+            android:id="@+id/tv_coinList_coinName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:paddingLeft="40dp"
+            android:text="@string/coinList_coinName"
+            android:textColor="@color/gray"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv_coinList_tradePrice"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_coinList_tradePrice"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:paddingLeft="26dp"
+            android:text="@string/coinList_tradePrice"
+            android:textColor="@color/gray"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/tv_coinList_coinName"
+            app:layout_constraintRight_toLeftOf="@id/tv_coinList_signedChangeRate"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_coinList_signedChangeRate"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="@string/coinList_signedChangeRate"
+            android:textColor="@color/gray"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/tv_coinList_tradePrice"
+            app:layout_constraintRight_toLeftOf="@id/tv_coinList_accTradePrice24H"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_coinList_accTradePrice24H"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="@string/coinList_accTradePrice24H"
+            android:textColor="@color/gray"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/tv_coinList_signedChangeRate"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_coinList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_coinList_legend" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

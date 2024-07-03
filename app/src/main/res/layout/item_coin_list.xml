@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_coinListItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background">
+
+    <com.kubit.android.common.custom.KubitChangeRateStickView
+        android:id="@+id/cv_coinListItem_changeRateStick"
+        android:layout_width="10dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tv_coinListItem_nameKor"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_coinListItem_nameKor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="5dp"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:text="비트코인"
+        android:textColor="@color/text"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toTopOf="@id/tv_coinListItem_nameEng"
+        app:layout_constraintLeft_toRightOf="@id/cv_coinListItem_changeRateStick"
+        app:layout_constraintRight_toLeftOf="@id/tv_coinListItem_tradePrice"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_coinListItem_nameEng"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:text="Bitcoin"
+        android:textColor="@color/gray"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/tv_coinListItem_nameKor"
+        app:layout_constraintRight_toRightOf="@id/tv_coinListItem_nameKor"
+        app:layout_constraintTop_toBottomOf="@id/tv_coinListItem_nameKor" />
+
+    <TextView
+        android:id="@+id/tv_coinListItem_tradePrice"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:gravity="right"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:text="36,912,000"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_coinListItem_nameKor"
+        app:layout_constraintLeft_toRightOf="@id/tv_coinListItem_nameKor"
+        app:layout_constraintRight_toLeftOf="@id/tv_coinListItem_signedChangeRate"
+        app:layout_constraintTop_toTopOf="@id/tv_coinListItem_nameKor" />
+
+    <TextView
+        android:id="@+id/tv_coinListItem_signedChangeRate"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:gravity="right"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:text="-10.00%"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_coinListItem_nameKor"
+        app:layout_constraintLeft_toRightOf="@id/tv_coinListItem_tradePrice"
+        app:layout_constraintRight_toLeftOf="@id/tv_coinListItem_accTradePrice24H"
+        app:layout_constraintTop_toTopOf="@id/tv_coinListItem_nameKor" />
+
+    <TextView
+        android:id="@+id/tv_coinListItem_accTradePrice24H"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:gravity="right"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:text="146,069백만"
+        android:textColor="@color/text"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_coinListItem_nameKor"
+        app:layout_constraintLeft_toRightOf="@id/tv_coinListItem_signedChangeRate"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_coinListItem_nameKor" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

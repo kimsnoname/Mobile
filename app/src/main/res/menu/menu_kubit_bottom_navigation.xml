@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/icon_tab_home"
+        android:title="@string/bottom_nav_coinList" />
+
+    <item
+        android:id="@+id/menu_investment"
+        android:icon="@drawable/icon_tab_investment"
+        android:title="@string/bottom_nav_investment" />
+
+    <item
+        android:id="@+id/menu_exchange"
+        android:icon="@drawable/icon_tab_exchange"
+        android:title="@string/bottom_nav_exchange" />
+
+    <item
+        android:id="@+id/menu_profile"
+        android:icon="@drawable/icon_tab_profile"
+        android:title="@string/bottom_nav_profile" />
+
+</menu>

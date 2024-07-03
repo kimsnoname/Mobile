@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".order.view.OrderBookFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_orderBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <com.kubit.android.common.custom.KubitOrderBookLayout
+        android:id="@+id/cv_orderBook"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/gl_orderBook"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_orderBook_tabBid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/noto_sans_kr_medium"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:paddingTop="11dp"
+        android:paddingBottom="10dp"
+        android:text="@string/orderBook_tab_bid"
+        android:textColor="@color/coin_red"
+        android:textSize="14dp"
+        app:layout_constraintLeft_toRightOf="@id/gl_orderBook"
+        app:layout_constraintRight_toLeftOf="@id/tv_orderBook_tabAsk"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_orderBook_tabAsk"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/border"
+        android:fontFamily="@font/noto_sans_kr_medium"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:paddingTop="11dp"
+        android:paddingBottom="10dp"
+        android:text="@string/orderBook_tab_ask"
+        android:textColor="@color/text"
+        android:textSize="14dp"
+        app:layout_constraintLeft_toRightOf="@id/tv_orderBook_tabBid"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_orderBook_bidLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/gl_orderBook"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_orderBook_tabBid">
+
+        <ImageView
+            android:id="@+id/iv_orderBook_bidDesignatedPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="5dp"
+            android:src="@drawable/icon_radio_selected"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv_orderBook_bidDesignatedPrice"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_orderBook_bidDesignatedPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:paddingRight="5dp"
+            android:text="@string/orderBook_designatedPrice"
+            android:textColor="@color/text"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_orderBook_bidDesignatedPrice"
+            app:layout_constraintLeft_toRightOf="@id/iv_orderBook_bidDesignatedPrice"
+            app:layout_constraintRight_toLeftOf="@id/iv_orderBook_bidMarketPrice"
+            app:layout_constraintTop_toTopOf="@id/iv_orderBook_bidDesignatedPrice" />
+
+        <ImageView
+            android:id="@+id/iv_orderBook_bidMarketPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="5dp"
+            android:src="@drawable/icon_radio_unselected"
+            app:layout_constraintBottom_toBottomOf="@id/iv_orderBook_bidDesignatedPrice"
+            app:layout_constraintLeft_toRightOf="@id/tv_orderBook_bidDesignatedPrice"
+            app:layout_constraintRight_toLeftOf="@id/tv_orderBook_bidMarketPrice"
+            app:layout_constraintTop_toTopOf="@id/iv_orderBook_bidDesignatedPrice" />
+
+        <TextView
+            android:id="@+id/tv_orderBook_bidMarketPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:paddingRight="5dp"
+            android:text="@string/orderBook_marketPrice"
+            android:textColor="@color/text"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_orderBook_bidMarketPrice"
+            app:layout_constraintLeft_toRightOf="@id/iv_orderBook_bidMarketPrice"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_orderBook_bidMarketPrice" />
+
+        <TextView
+            android:id="@+id/tv_orderBook_bidCanOrderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="@string/orderBook_canOrderTitle"
+            android:textColor="@color/gray"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toTopOf="@id/cl_orderBook_bidQuantity"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv_orderBook_bidCanOrder"
+            app:layout_constraintTop_toBottomOf="@id/iv_orderBook_bidDesignatedPrice" />
+
+        <TextView
+            android:id="@+id/tv_orderBook_bidCanOrder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:fontFamily="@font/noto_sans_kr_bold"
+            android:gravity="center_vertical|right"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="0 KRW"
+            android:textColor="@color/text"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_orderBook_bidCanOrderTitle"
+            app:layout_constraintLeft_toRightOf="@id/tv_orderBook_bidCanOrderTitle"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_orderBook_bidCanOrderTitle" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_orderBook_bidQuantity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/back_border"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="1dp"
+            app:layout_constraintBottom_toTopOf="@id/cl_orderBook_bidUnitPrice"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_orderBook_bidCanOrderTitle">
+
+            <TextView
+                android:id="@+id/tv_orderBook_bidQuantityTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/noto_sans_kr_regular"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="@string/orderBook_quantity"
+                android:textColor="@color/text"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/tv_orderBook_bidQuantity"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_orderBook_bidQuantity"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:fontFamily="@font/noto_sans_kr_regular"
+                android:gravity="center_vertical|right"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:paddingLeft="5dp"
+                android:paddingRight="6dp"
+                android:text="0"
+                android:textColor="@color/text"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tv_orderBook_bidQuantityTitle"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_orderBook_bidUnitPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/back_border"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="1dp"
+            app:layout_constraintBottom_toTopOf="@id/cl_orderBook_bidTotalPrice"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_orderBook_bidQuantity"
+            app:layout_goneMarginTop="15dp">
+
+            <TextView
+                android:id="@+id/tv_orderBook_bidUnitPriceTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/noto_sans_kr_regular"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="@string/orderBook_unitPrice"
+                android:textColor="@color/text"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/tv_orderBook_bidUnitPrice"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_orderBook_bidUnitPrice"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:fontFamily="@font/noto_sans_kr_regular"
+                android:gravity="center_vertical|right"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:paddingLeft="5dp"
+                android:paddingRight="6dp"
+                android:text="0"
+                android:textColor="@color/text"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tv_orderBook_bidUnitPriceTitle"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_orderBook_bidTotalPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/back_border"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="1dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_orderBook_bidUnitPrice"
+            app:layout_goneMarginTop="15dp">
+
+            <TextView
+                android:id="@+id/tv_orderBook_bidTotalPriceTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="7dp"
+                android:fontFamily="@font/noto_sans_kr_regular"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="@string/orderBook_totalPriceTitle"
+                android:textColor="@color/text"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/tv_orderBook_bidTotalPrice"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_orderBook_bidTotalPrice"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/background"
+                android:fontFamily="@font/noto_sans_kr_regular"
+                android:gravity="center_vertical|right"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:paddingLeft="5dp"
+                android:paddingRight="6dp"
+                android:text="0 KRW"
+                android:textColor="@color/text"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tv_orderBook_bidTotalPriceTitle"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_orderBook_bidClear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/border"
+            android:fontFamily="@font/noto_sans_kr_medium"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/orderBook_clear"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv_orderBook_bidConfirm"
+            app:layout_constraintTop_toBottomOf="@id/cl_orderBook_bidTotalPrice" />
+
+        <TextView
+            android:id="@+id/tv_orderBook_bidConfirm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/coin_red"
+            android:fontFamily="@font/noto_sans_kr_medium"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/orderBook_bid"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layout_constraintLeft_toRightOf="@id/tv_orderBook_bidClear"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_orderBook_bidTotalPrice" />
+
+        <TextView
+            android:id="@+id/tv_orderBook_bidMinOrderPriceTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="@string/orderBook_minOrderPriceTitle"
+            android:textColor="@color/gray"
+            android:textSize="10dp"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv_orderBook_bidMinOrderPrice"
+            app:layout_constraintTop_toBottomOf="@id/tv_orderBook_bidClear" />
+
+        <TextView
+            android:id="@+id/tv_orderBook_bidMinOrderPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="@string/orderBook_minOrderPrice"
+            android:textColor="@color/gray"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_orderBook_bidMinOrderPriceTitle"
+            app:layout_constraintLeft_toRightOf="@id/tv_orderBook_bidMinOrderPriceTitle"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_orderBook_bidMinOrderPriceTitle" />
+
+        <TextView
+            android:id="@+id/tv_orderBook_bidFeeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="@string/orderBook_feeTitle"
+            android:textColor="@color/gray"
+            android:textSize="10dp"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv_orderBook_bidFee"
+            app:layout_constraintTop_toBottomOf="@id/tv_orderBook_bidMinOrderPriceTitle" />
+
+        <TextView
+            android:id="@+id/tv_orderBook_bidFee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="@string/orderBook_fee"
+            android:textColor="@color/gray"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_orderBook_bidFeeTitle"
+            app:layout_constraintLeft_toRightOf="@id/tv_orderBook_bidFeeTitle"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_orderBook_bidFeeTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_orderBook_askLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/gl_orderBook"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_orderBook_tabBid">
+
+        <ImageView
+            android:id="@+id/iv_orderBook_askDesignatedPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="5dp"
+            android:src="@drawable/icon_radio_selected"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv_orderBook_askDesignatedPrice"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_orderBook_askDesignatedPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:paddingRight="5dp"
+            android:text="@string/orderBook_designatedPrice"
+            android:textColor="@color/text"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_orderBook_askDesignatedPrice"
+            app:layout_constraintLeft_toRightOf="@id/iv_orderBook_askDesignatedPrice"
+            app:layout_constraintRight_toLeftOf="@id/iv_orderBook_askMarketPrice"
+            app:layout_constraintTop_toTopOf="@id/iv_orderBook_askDesignatedPrice" />
+
+        <ImageView
+            android:id="@+id/iv_orderBook_askMarketPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="5dp"
+            android:src="@drawable/icon_radio_unselected"
+            app:layout_constraintBottom_toBottomOf="@id/iv_orderBook_askDesignatedPrice"
+            app:layout_constraintLeft_toRightOf="@id/tv_orderBook_askDesignatedPrice"
+            app:layout_constraintRight_toLeftOf="@id/tv_orderBook_askMarketPrice"
+            app:layout_constraintTop_toTopOf="@id/iv_orderBook_askDesignatedPrice" />
+
+        <TextView
+            android:id="@+id/tv_orderBook_askMarketPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:paddingRight="5dp"
+            android:text="@string/orderBook_marketPrice"
+            android:textColor="@color/text"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_orderBook_askMarketPrice"
+            app:layout_constraintLeft_toRightOf="@id/iv_orderBook_askMarketPrice"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_orderBook_askMarketPrice" />
+
+        <TextView
+            android:id="@+id/tv_orderBook_askCanOrderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="@string/orderBook_canOrderTitle"
+            android:textColor="@color/gray"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toTopOf="@id/cl_orderBook_askQuantity"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv_orderBook_askCanOrder"
+            app:layout_constraintTop_toBottomOf="@id/iv_orderBook_askDesignatedPrice" />
+
+        <TextView
+            android:id="@+id/tv_orderBook_askCanOrder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:fontFamily="@font/noto_sans_kr_bold"
+            android:gravity="center_vertical|right"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="0 KRW"
+            android:textColor="@color/text"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_orderBook_askCanOrderTitle"
+            app:layout_constraintLeft_toRightOf="@id/tv_orderBook_askCanOrderTitle"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_orderBook_askCanOrderTitle" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_orderBook_askQuantity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/back_border"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="1dp"
+            app:layout_constraintBottom_toTopOf="@id/cl_orderBook_askUnitPrice"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_orderBook_askCanOrderTitle">
+
+            <TextView
+                android:id="@+id/tv_orderBook_askQuantityTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/noto_sans_kr_regular"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="@string/orderBook_quantity"
+                android:textColor="@color/text"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/tv_orderBook_askQuantity"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_orderBook_askQuantity"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:fontFamily="@font/noto_sans_kr_regular"
+                android:gravity="center_vertical|right"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:paddingLeft="5dp"
+                android:paddingRight="6dp"
+                android:text="0"
+                android:textColor="@color/text"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tv_orderBook_askQuantityTitle"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_orderBook_askUnitPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/back_border"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="1dp"
+            app:layout_constraintBottom_toTopOf="@id/cl_orderBook_askTotalPrice"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_orderBook_askQuantity"
+            app:layout_goneMarginTop="15dp">
+
+            <TextView
+                android:id="@+id/tv_orderBook_askUnitPriceTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/noto_sans_kr_regular"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="@string/orderBook_unitPrice"
+                android:textColor="@color/text"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/tv_orderBook_askUnitPrice"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_orderBook_askUnitPrice"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:fontFamily="@font/noto_sans_kr_regular"
+                android:gravity="center_vertical|right"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:paddingLeft="5dp"
+                android:paddingRight="6dp"
+                android:text="0"
+                android:textColor="@color/text"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tv_orderBook_askUnitPriceTitle"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_orderBook_askTotalPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/back_border"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="1dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_orderBook_askUnitPrice"
+            app:layout_goneMarginTop="15dp">
+
+            <TextView
+                android:id="@+id/tv_orderBook_askTotalPriceTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="7dp"
+                android:fontFamily="@font/noto_sans_kr_regular"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:text="@string/orderBook_totalPriceTitle"
+                android:textColor="@color/text"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/tv_orderBook_askTotalPrice"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_orderBook_askTotalPrice"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/background"
+                android:fontFamily="@font/noto_sans_kr_regular"
+                android:gravity="center_vertical|right"
+                android:includeFontPadding="false"
+                android:letterSpacing="-0.05"
+                android:paddingLeft="5dp"
+                android:paddingRight="6dp"
+                android:text="0 KRW"
+                android:textColor="@color/text"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tv_orderBook_askTotalPriceTitle"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_orderBook_askClear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/border"
+            android:fontFamily="@font/noto_sans_kr_medium"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/orderBook_clear"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv_orderBook_askConfirm"
+            app:layout_constraintTop_toBottomOf="@id/cl_orderBook_askTotalPrice" />
+
+        <TextView
+            android:id="@+id/tv_orderBook_askConfirm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/coin_blue"
+            android:fontFamily="@font/noto_sans_kr_medium"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/orderBook_ask"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layout_constraintLeft_toRightOf="@id/tv_orderBook_askClear"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_orderBook_askTotalPrice" />
+
+        <TextView
+            android:id="@+id/tv_orderBook_askMinOrderPriceTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="@string/orderBook_minOrderPriceTitle"
+            android:textColor="@color/gray"
+            android:textSize="10dp"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv_orderBook_askMinOrderPrice"
+            app:layout_constraintTop_toBottomOf="@id/tv_orderBook_askClear" />
+
+        <TextView
+            android:id="@+id/tv_orderBook_askMinOrderPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="@string/orderBook_minOrderPrice"
+            android:textColor="@color/gray"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_orderBook_askMinOrderPriceTitle"
+            app:layout_constraintLeft_toRightOf="@id/tv_orderBook_askMinOrderPriceTitle"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_orderBook_askMinOrderPriceTitle" />
+
+        <TextView
+            android:id="@+id/tv_orderBook_askFeeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="@string/orderBook_feeTitle"
+            android:textColor="@color/gray"
+            android:textSize="10dp"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv_orderBook_askFee"
+            app:layout_constraintTop_toBottomOf="@id/tv_orderBook_askMinOrderPriceTitle" />
+
+        <TextView
+            android:id="@+id/tv_orderBook_askFee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.05"
+            android:text="@string/orderBook_fee"
+            android:textColor="@color/gray"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_orderBook_askFeeTitle"
+            app:layout_constraintLeft_toRightOf="@id/tv_orderBook_askFeeTitle"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_orderBook_askFeeTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

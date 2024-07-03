@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_investmentAssetItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/tv_investmentAssetItem_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/noto_sans_kr_bold"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:text="@string/investmentAssetItem_title"
+        android:textColor="@color/text"
+        android:textSize="14dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_investmentAssetItem_krwTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:fontFamily="@font/noto_sans_kr_medium"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:text="@string/investmentAssetItem_krwTitle"
+        android:textColor="@color/text"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toTopOf="@id/tv_investmentAssetItem_krw"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/gl_investmentAssetItem"
+        app:layout_constraintTop_toBottomOf="@id/tv_investmentAssetItem_title" />
+
+    <TextView
+        android:id="@+id/tv_investmentAssetItem_krw"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/noto_sans_kr_medium"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:textColor="@color/text"
+        android:textSize="14dp"
+        app:layout_constraintLeft_toLeftOf="@id/tv_investmentAssetItem_krwTitle"
+        app:layout_constraintRight_toRightOf="@id/tv_investmentAssetItem_krwTitle"
+        app:layout_constraintTop_toBottomOf="@id/tv_investmentAssetItem_krwTitle" />
+
+    <TextView
+        android:id="@+id/tv_investmentAssetItem_totalAssetTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:fontFamily="@font/noto_sans_kr_medium"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:text="@string/investmentAssetItem_totalAssetTitle"
+        android:textColor="@color/text"
+        android:textSize="13dp"
+        app:layout_constraintLeft_toRightOf="@id/gl_investmentAssetItem"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_investmentAssetItem_title" />
+
+    <TextView
+        android:id="@+id/tv_investmentAssetItem_totalAsset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/noto_sans_kr_medium"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:textColor="@color/text"
+        android:textSize="14dp"
+        app:layout_constraintLeft_toLeftOf="@id/tv_investmentAssetItem_totalAssetTitle"
+        app:layout_constraintRight_toRightOf="@id/tv_investmentAssetItem_totalAssetTitle"
+        app:layout_constraintTop_toBottomOf="@id/tv_investmentAssetItem_totalAssetTitle" />
+
+    <TextView
+        android:id="@+id/tv_investmentAssetItem_totalBidPriceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:text="@string/investmentAssetItem_totalBidPriceTitle"
+        android:textColor="@color/text"
+        android:textSize="12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tv_investmentAssetItem_totalBidPrice"
+        app:layout_constraintTop_toBottomOf="@id/tv_investmentAssetItem_krw" />
+
+    <TextView
+        android:id="@+id/tv_investmentAssetItem_totalBidPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:gravity="center_vertical|right"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:textColor="@color/text"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_investmentAssetItem_totalBidPriceTitle"
+        app:layout_constraintLeft_toRightOf="@id/tv_investmentAssetItem_totalBidPriceTitle"
+        app:layout_constraintRight_toLeftOf="@id/gl_investmentAssetItem"
+        app:layout_constraintTop_toTopOf="@id/tv_investmentAssetItem_totalBidPriceTitle" />
+
+    <TextView
+        android:id="@+id/tv_investmentAssetItem_changeValuationTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:text="@string/investmentAssetItem_changeValuationTitle"
+        android:textColor="@color/text"
+        android:textSize="12dp"
+        app:layout_constraintLeft_toRightOf="@id/gl_investmentAssetItem"
+        app:layout_constraintRight_toLeftOf="@id/tv_investmentAssetItem_changeValuation"
+        app:layout_constraintTop_toBottomOf="@id/tv_investmentAssetItem_totalAsset" />
+
+    <TextView
+        android:id="@+id/tv_investmentAssetItem_changeValuation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:gravity="center_vertical|right"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:textColor="@color/text"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_investmentAssetItem_changeValuationTitle"
+        app:layout_constraintLeft_toRightOf="@id/tv_investmentAssetItem_changeValuationTitle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_investmentAssetItem_changeValuationTitle" />
+
+    <TextView
+        android:id="@+id/tv_investmentAssetItem_totalValuationTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:text="@string/investmentAssetItem_totalValuationTitle"
+        android:textColor="@color/text"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tv_investmentAssetItem_totalValuation"
+        app:layout_constraintTop_toBottomOf="@id/tv_investmentAssetItem_totalBidPriceTitle" />
+
+    <TextView
+        android:id="@+id/tv_investmentAssetItem_totalValuation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:gravity="center_vertical|right"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:textColor="@color/text"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_investmentAssetItem_totalValuationTitle"
+        app:layout_constraintLeft_toRightOf="@id/tv_investmentAssetItem_totalValuationTitle"
+        app:layout_constraintRight_toLeftOf="@id/gl_investmentAssetItem"
+        app:layout_constraintTop_toTopOf="@id/tv_investmentAssetItem_totalValuationTitle" />
+
+    <TextView
+        android:id="@+id/tv_investmentAssetItem_earningRateTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:text="@string/investmentAssetItem_earningRateTitle"
+        android:textColor="@color/text"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/gl_investmentAssetItem"
+        app:layout_constraintRight_toLeftOf="@id/tv_investmentAssetItem_earningRate"
+        app:layout_constraintTop_toBottomOf="@id/tv_investmentAssetItem_changeValuationTitle" />
+
+    <TextView
+        android:id="@+id/tv_investmentAssetItem_earningRate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:fontFamily="@font/noto_sans_kr_regular"
+        android:gravity="center_vertical|right"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:textColor="@color/text"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_investmentAssetItem_earningRateTitle"
+        app:layout_constraintLeft_toRightOf="@id/tv_investmentAssetItem_earningRateTitle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_investmentAssetItem_earningRateTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

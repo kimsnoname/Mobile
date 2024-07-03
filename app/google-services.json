@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "752271673033",
+    "project_id": "kubit-f03ec",
+    "storage_bucket": "kubit-f03ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:752271673033:android:9b662ad44db07222f76f18",
+        "android_client_info": {
+          "package_name": "com.kubit.android"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPsi60u_trREC016D4P7z6WvTi7fNYvlE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

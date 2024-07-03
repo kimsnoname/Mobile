@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">@color/primary</color>
+
+    <color name="primary">#FF0D0D03</color>
+    <color name="secondary">#FF2E653D</color>
+
+    <color name="intro_text">@color/white</color>
+
+    <color name="text">#FFD9D9D9</color>
+
+    <color name="candle">#FF222222</color>
+    <color name="border">#FF222222</color>
+
+    <color name="coin_blue">#FF2F5FBD</color>
+    <color name="coin_red">#FFB95338</color>
+
+    <color name="transaction_blue">#FF081D3A</color>
+    <color name="transaction_red">#FF241A23</color>
+
+    <color name="tab_indicator">@color/text</color>
+    <color name="investment_btn">@color/text</color>
+</resources>
